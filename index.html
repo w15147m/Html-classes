@@ -1,36 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum qui
-      libero similique rem nemo porro fuga impedit quia voluptates, eum ullam
-      odio perferendis eaque nam omnis, dolores voluptas modi dolore.
-    </p>
-    <ul>
-      <li>01</li>
-      <li>02</li>
-      <li>03</li>
-      <li>04</li>
-      <li>05</li>
-    </ul>
-    <ol>
-      <li>a</li>
-      <li>b</li>
-      <li>c</li>
-      <li>d</li>
-      <li>f</li>
-    </ol>
-    <dl>
-      <dt>a</dt>
-      <dd>b</dd>
-      <dt>c</dt>
-      <dt>d</dt>
-  
-    </dl>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunshine School - Student Practice</title>
+    <style>
+        /* Universal Selector */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Element Selectors */
+        body {
+            font-family: Comic Sans MS, cursive;
+            background-color: #f0f8ff;
+        }
+
+        /* Header section */
+        header {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 25px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #4ecdc4;
+            padding: 15px;
+            
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        /* Main layout */
+        .page-container {
+            display: flex;
+            margin: 20px;
+            gap: 20px;
+        }
+
+        /* Main content area */
+        main {
+            background-color: white;
+            padding: 25px;
+            width: 65%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* ID Selector - unique title */
+        #school-title {
+            color: #ff6b6b;
+            font-size: 28px;
+            
+            margin-bottom: 20px;
+        }
+
+        /* Class Selectors */
+        .info-box {
+            background-color: #ffe66d;
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .subject-box {
+            background-color: #a8e6cf;
+            padding: 15px;
+            margin: 10px 0;
+        }
+
+        .important-text {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        .center-text {
+            
+        }
+
+        /* Group Selectors */
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+
+        p, li {
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        /* Descendant Selectors */
+        .info-box h3 {
+            color: #e67e22;
+            margin-bottom: 10px;
+        }
+
+        .subject-box ul {
+            padding-left: 20px;
+        }
+
+        main ul li {
+            background-color: #ecf0f1;
+            padding: 8px;
+            margin: 5px 0;
+            list-style-type: none;
+        }
+
+        /* Article styling */
+        article {
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #f8f9fa;
+        }
+
+        /* Sidebar */
+        aside {
+            background-color: #ffeaa7;
+            padding: 25px;
+            width: 35%;
+            height: fit-content;
+        }
+
+        /* Class schedule table */
+        .schedule-table {
+            width: 100%;
+            margin: 15px 0;
+        }
+
+        .schedule-table th {
+            background-color: #74b9ff;
+            color: white;
+            padding: 10px;
+        }
+
+        .schedule-table td {
+            padding: 8px;
+            
+        }
+
+        /* Height and Width examples */
+        .small-box {
+            width: 150px;
+            height: 80px;
+            background-color: #fd79a8;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .wide-box {
+            width: 80%;
+            height: 50px;
+            background-color: #00b894;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        /* Quiz section */
+        .quiz-section {
+            margin: 15px 0;
+        }
+
+        .quiz-header {
+            background-color: #6c5ce7;
+            color: white;
+            padding: 12px;
+            cursor: pointer;
+            
+            font-weight: bold;
+        }
+
+        .quiz-header:hover {
+            background-color: #5f3dc4;
+        }
+
+        .quiz-content {
+            padding: 15px;
+            background-color: #e17055;
+            color: white;
+            display: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d3436;
+            color: white;
+            
+            padding: 20px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Header -->
+    <header>
+        <h1>Sunshine Elementary School</h1>
+        <p>Where Learning is Fun!</p>
+    </header>
+
+    <!-- Navigation Links -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#classes">Classes</a>
+        <a href="#teachers">Teachers</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="page-container">
+        <!-- Main Content -->
+        <main>
+            <h2 id="school-title">Welcome Students!</h2>
+
+            <!-- Information sections -->
+            <div class="info-box">
+                <h3>School News</h3>
+                <p>Our <span class="important-text">Science Fair</span> is coming next month! Start thinking about your projects.</p>
+                <p class="center-text">Registration deadline: March 15th</p>
+            </div>
+
+            <div class="subject-box">
+                <h3>Favorite Subjects</h3>
+                <ul>
+                    <li>Mathematics - Learn numbers and solve problems</li>
+                    <li>Science - Discover how things work</li>
+                    <li>English - Read stories and write creatively</li>
+                    <li>Art - Express yourself with colors</li>
+                </ul>
+            </div>
+
+            <!-- Article section -->
+            <article>
+                <h3>Student of the Month</h3>
+                <p><strong>Congratulations to Sarah Johnson!</strong></p>
+                <p>Sarah has shown excellent improvement in all her subjects and always helps her classmates. She loves reading and has finished 15 books this month!</p>
+                <p class="important-text">Keep up the great work, Sarah!</p>
+            </article>
+
+            <!-- Size examples -->
+            <h3>Learning Boxes</h3>
+            <div class="small-box">Small Box<br>150px  * 80px</div>
+            <div class="wide-box">Wide Box - 80% width</div>
+        </main>
+
+        <!-- Sidebar -->
+        <aside>
+            <h3>Class Schedule</h3>
+            
+            <!-- Schedule table -->
+            <table class="schedule-table">
+                <tr>
+                    <th>Time</th>
+                    <th>Subject</th>
+                </tr>
+                <tr>
+                    <td>9:00 AM</td>
+                    <td>Math</td>
+                </tr>
+                <tr>
+                    <td>10:00 AM</td>
+                    <td>English</td>
+                </tr>
+                <tr>
+                    <td>11:00 AM</td>
+                    <td>Science</td>
+                </tr>
+                <tr>
+                    <td>12:00 PM</td>
+                    <td>Lunch</td>
+                </tr>
+                <tr>
+                    <td>1:00 PM</td>
+                    <td>Art</td>
+                </tr>
+            </table>
+
+            <!-- Quick Quiz -->
+            <div class="quiz-section">
+                <div class="quiz-header" onclick="showQuiz()">
+                    Click for Quick Quiz!
+                </div>
+                <div class="quiz-content" id="quizContent">
+                    <p><strong>Question:</strong> What is 5 + 3?</p>
+                    <p>A) 7</p>
+                    <p>B) 8</p>
+                    <p>C) 9</p>
+                    <p><em>Answer: B) 8! Great job! </em></p>
+                </div>
+            </div>
+
+            <!-- School tips -->
+            <h4> Study Tips</h4>
+            <ul style="list-style-type: none; padding: 0;">
+                <li >Take good notes</li>
+                <li >Ask questions</li>
+                <li >Read every day</li>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Page Footer -->
+    <footer>
+        <p>© 2025 Sunshine Elementary School | Phone: (555) 123-KIDS | Email: info@sunshine-school.edu</p>
+        <p>Building bright futures, one student at a time! </p>
+    </footer>
+
+    <script>
+        function showQuiz() {
+            var quiz = document.getElementById('quizContent');
+            if (quiz.style.display === 'none' || quiz.style.display === '') {
+                quiz.style.display = 'block';
+            } else {
+                quiz.style.display = 'none';
+            }
+        }
+    </script>
+</body>
 </html>
