@@ -1,263 +1,91 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css" media="all">
+  <title>CSS Grid</title>
 </head>
 
 <body>
-   <header>
-      <i class="fa-solid fa-pen-ruler"></i>
-      <span class="nav-links">
-         <nav class="nav-link">Home</nav>
-         <nav class="nav-link"> About</nav>
-         <nav class="nav-link"> Contact</nav>
-      </span>
-   </header>
-   <style>
-      * {
-  padding: 0%;
-  margin: 0%;
-  box-sizing: border-box;
-}
 
-header {
-  z-index: 1;
-  position: sticky;
-  top: 0%;
-  width: 100%;
-  height: 50px;
-  background-color: #333;
-  color: white;
-}
+  <h1>CSS Grid Gallery</h1>
+  <div class="container">
 
-.nav-links {
-  position: absolute;
-  top: 15px;
-  right: 30px;
-}
-
-.nav-link {
-  display: inline;
-  margin-left: 15px;
-
-
-}
-
-.fa-pen-ruler {
-  position: absolute;
-  top: 15px;
-  left: 30px;
-}
-
-
-aside {
-  position: fixed;
-  top: 50px;
-  left: opx;
-  width: 200px;
-  height: calc(100vh - 50px);
-  background-color: rgba(199, 198, 198, 0.185);
-  border-right: 1px solid #ccc;
-  padding: 20px;
-
-}
-
-main {
-  width: 782px;
-  position: relative;
-  top: 50px;
-  left: 200px;
-  border: #ffffff solid;
-  height: 100vh;
-
-}
-
-.item {
-  width: 180px;
-  height: 120px;
-  text-align: center;
-  padding: 50px;
-  margin: 10px;
-}
-
-.item1 {
-  position: absolute;
-  top: 20px;
-  left: 50px;
-  background-color: aqua;
-}
-
-.item2 {
-  background-color: rgb(251, 255, 0);
-  position: absolute;
-  Top: 150px;
-  Left: 200px;
-
-}
-
-.item3 {
-  background-color: rgb(225, 0, 255);
-  position: absolute;
-  Top: 20px;
-  right: 200px;
-}
-
-
-.sticky-banner {
-  position: sticky;
-  top: 50px;
-  margin-top: 320px;
-  height: 40px;
-  text-align: center;
-  background-color: orange;
-  color: white;
-  padding: 10px;
-  text-align: center;
-}
-
-.static-content {
-  background-color: rgb(133, 133, 133);
-  padding: 20px;
-  margin: 10px;
-  border-radius: 10px;
-  color: rgb(255, 255, 255);
-}
-.arrow-up {
-  color: white;
-  background-color: rgb(197, 192, 192);
-  position: sticky;
-  bottom: 20px;
-  right: 20px;
-}
-.arrow {
-  color: white;
-  background-color: black;
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-   position: fixed;   /* ✅ instead of sticky */
-  bottom: 20px;      /* distance from bottom */
-  right: 20px;  
-}
-
-.arrow-up i {
-  padding: 20px;
-
-}
-   </style>
-   <aside>
-      <h2>sidebar</h2>
-      <ul>
-         <li class="li-item li-item1"> li-item1</li>
-         <li class="li-item li-item2"> li-item2</li>
-         <li class="li-item li-item3"> li-item3</li>
-         <li class="li-item li-item4"> li-item4</li>
-         <li class="li-item li-item5"> li-item5</li>
-      </ul>
-   </aside>
-   <main>
-      <div class="item item1">item1</div>
-
-      <div class="item item2">item2</div>
-
-      <div class="item item3">item3</div>
-
-      <div class="sticky-banner ">
-         <h3>
-            This banner sticks when you scroll!
-         </h3>
+    <div class="gallery-container w-3 h-2">
+      <div class="gallery-item">
+        <div class="image">
+          <img src="https://picsum.photos/1600/900?random=1" alt="nature">
+        </div>
+        <div class="text">Nature</div>
       </div>
-      <div class="static-content">
-         <h2>
-            Static Content (Normal Flow)
+    </div>
 
-         </h2>
-         <p>
-            This content uses the default position: static. It follows the normal document flow.
-         </p>
-         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.</p>
+    <div class="gallery-container w-3 h-3">
+      <div class="gallery-item">
+        <div class="image">
+          <img src="https://picsum.photos/1600/900?random=2" alt="people">
+        </div>
+        <div class="text">People</div>
       </div>
-      <div class="static-content">
-         <h2>
-            Static Content (Normal Flow)
+    </div>
 
-         </h2>
-         <p>
-            This content uses the default position: static. It follows the normal document flow.
-         </p>
-         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.</p>
+    <div class="gallery-container h-2">
+      <div class="gallery-item">
+        <div class="image">
+          <img src="https://picsum.photos/1600/900?random=3" alt="sport">
+        </div>
+        <div class="text">Sport</div>
       </div>
-      <div class="static-content">
-         <h2>
-            Static Content (Normal Flow)
+    </div>
 
-         </h2>
-         <p>
-            This content uses the default position: static. It follows the normal document flow.
-         </p>
-         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.</p>
+    <div class="gallery-container w-2">
+      <div class="gallery-item">
+        <div class="image">
+          <img src="https://picsum.photos/1600/900?random=4" alt="fitness">
+        </div>
+        <div class="text">Fitness</div>
       </div>
-      <div class="static-content">
-         <h2>
-            Static Content (Normal Flow)
+    </div>
 
-         </h2>
-         <p>
-            This content uses the default position: static. It follows the normal document flow.
-         </p>
-         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.</p>
+    <div class="gallery-container w-4 h-1">
+      <div class="gallery-item">
+        <div class="image">
+          <img src="https://picsum.photos/1600/900?random=5" alt="food">
+        </div>
+        <div class="text">Food</div>
       </div>
-      <div class="static-content">
-         <h2>
-            Static Content (Normal Flow)
+    </div>
 
-         </h2>
-         <p>
-            This content uses the default position: static. It follows the normal document flow.
-         </p>
-         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.</p>
+    <div class="gallery-container">
+      <div class="gallery-item">
+        <div class="image">
+          <img src="https://picsum.photos/1600/900?random=6" alt="travel">
+        </div>
+        <div class="text">Travel</div>
       </div>
-      <div class="static-content">
-         <h2>
-            Static Content (Normal Flow)
+    </div>
 
-         </h2>
-         <p>
-            This content uses the default position: static. It follows the normal document flow.
-         </p>
-         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.</p>
+    <div class="gallery-container h-2">
+      <div class="gallery-item">
+        <div class="image">
+          <img src="https://picsum.photos/1600/900?random=7" alt="art">
+        </div>
+        <div class="text">Art</div>
       </div>
-      <div class="static-content">
-         <h2>
-            Static Content (Normal Flow)
+    </div>
 
-         </h2>
-         <p>
-            This content uses the default position: static. It follows the normal document flow.
-         </p>
-         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua.</p>
-         </div>
-         <div class="arrow-up">
-            <div class="arrow">
-           <i class="fa-solid fa-arrow-up"></i>
-     </div>
-         </div>
-         </main>
+    <div class="gallery-container">
+      <div class="gallery-item">
+        <div class="image">
+          <img src="https://picsum.photos/1600/900?random=8" alt="cars">
+        </div>
+        <div class="text">Cars</div>
+      </div>
+    </div>
 
+  </div>
 </body>
 
 </html>
